@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Practical tasks 3-4 by Kornelija Gasparaityte iifu-17
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
