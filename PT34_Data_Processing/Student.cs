@@ -39,7 +39,7 @@ namespace PT34_Data_Processing
         }
 
         // Homework as an array
-        
+        /*
         private int[] _hwArr = new int[4];
 
         public int[] HwArr
@@ -53,16 +53,16 @@ namespace PT34_Data_Processing
         {
             return _hwArr.Length;
         }
-        
+        */
         
         //Homework as a list
-        /*
+        
         private List<int> _hwList = new List<int>();
         public List<int> HwList
         {
             get => _hwList;
             set => _hwList = value;
         }
-        */
+        
     }
 }

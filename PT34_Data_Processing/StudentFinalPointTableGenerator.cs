@@ -19,8 +19,13 @@ namespace PT34_Data_Processing
         {
             string tableHeader = GenerateHeader(type);
             string tableBody = GenerateBody(studentList, type);
+
+            if (studentList.GetTotalNumberOfStudents() == 0)
+                Console.WriteLine("\nNo students have been added yet.");
+
             Console.WriteLine(tableHeader + tableBody + BORDER);
         }
+
         public string GenerateHeader(FinalPointCalculationType type)
         {
             string avgOrMed = type == FinalPointCalculationType.Average ? "(Avg.)" : "(Med.)";

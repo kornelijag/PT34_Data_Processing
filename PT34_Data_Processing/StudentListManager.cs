@@ -10,7 +10,7 @@ namespace PT34_Data_Processing
     {
         private StudentPointManager _studentPointManager = new StudentPointManager();
 
-        
+        /*
         public void AddStudentsAndPointsManually(StudentList studentList) // with homework array
         {
             bool addMoreStudents = true;
@@ -61,8 +61,9 @@ namespace PT34_Data_Processing
                 }
             }
         }
+        */
+
         
-        /*
         public void AddStudentsAndPointsManually(StudentList studentList) // with homework list
         {
             bool addMoreStudents = true;
@@ -131,11 +132,11 @@ namespace PT34_Data_Processing
                 }
             }
         }
-        */
+        
 
         public void AddDefaultStudents(StudentList studentList)
         {
-            if (studentList.ReturnNumberOfStudents() > 0)
+            if (studentList.GetTotalNumberOfStudents() > 0)
             studentList.RemoveAllStudents();
 
             studentList
@@ -146,38 +147,36 @@ namespace PT34_Data_Processing
 
         public void GeneratePointsRandomly(StudentList studentList)
         {
-            Random randomPoint = new Random();
+            Random random = new Random();
 
             // with homework array
-            
+            /*
             for (int student = 0; student < studentList.Students.Count; student++)
             {
+                // random homework points
                 for (int hw = 0; hw < studentList.Students[student].HwArr.Length; hw++)
-                    // random homework points
-                    studentList.Students[student].HwArr[hw] = randomPoint.Next(4, 10);
+                    studentList.Students[student].HwArr[hw] = random.Next(4, 10);
 
                 // random exam point
-                studentList.Students[student].Exam = randomPoint.Next(4, 10);
+                studentList.Students[student].Exam = random.Next(4, 10);
             }
-            
+            */
 
             // with homework list
-            /*
+
             for (int student = 0; student < studentList.Students.Count; student++)
             {
                 bool hasHw = studentList.Students[student].HwList.Count > 0;
 
-                if (!hasHw) for (int i = 0; i < 3; i++) studentList.Students[student].HwList.Add(0);
-
-                for (int hw = 0; hw < studentList.Students[student].HwList.Count; hw++)
-                    // random homework points
-                    studentList.Students[student].HwList[hw] = randomPoint.Next(4, 10);
+                // random number of homeworks with random points
+                if (!hasHw) for (int i = 0; i < random.Next(3, 5); i++) 
+                        studentList.Students[student].HwList.Add(random.Next(4, 10));
 
                 // random exam point
-                studentList.Students[student].Exam = randomPoint.Next(4, 10);
+                studentList.Students[student].Exam = random.Next(4, 10);
             }
-            */
-            
+
+
             Console.WriteLine("Random HW and exam points have geen generated for all students.");
         }
 

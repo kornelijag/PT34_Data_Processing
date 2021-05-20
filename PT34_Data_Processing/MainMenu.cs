@@ -30,7 +30,7 @@ namespace PT34_Data_Processing
                         break;
                     case 2:
                         Console.WriteLine("Option chosen: 2");
-                        ResultMenu.OpenMenu(studentList);
+                        ResultMenu.OpenMenu(studentList); // offers to calculate final point based on average or median
                         StudentListManager studentListManager = new StudentListManager();
                         studentListManager.PrintAllPoints(studentList);
                         OpenMenu(studentList);

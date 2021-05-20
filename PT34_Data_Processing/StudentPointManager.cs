@@ -28,23 +28,23 @@ namespace PT34_Data_Processing
         public void PrintHwPoints(Student student) // for testing
         {
             // if array
-            
+            /*
             for (int i = 0; i < student.HwArr.Length; i++)
             {
                 int hwNo = i + 1;
                 Console.WriteLine("HW no." + hwNo + ": " + student.HwArr[i]);
             }
-            
+            */
 
 
             // if list
-            /*
+            
             for (int i = 0; i < student.HwList.Count; i++)
             {
                 int hwNo = i + 1;
                 Console.WriteLine("HW no." + hwNo + ": " + student.HwList[i]);
             }
-            */
+            
 
         }
 
@@ -54,22 +54,22 @@ namespace PT34_Data_Processing
 
 
             // with homework array
-            
+            /*
             for (int i = 0; i < student.HwArr.Length; i++)
             {
                 hwAverage += student.HwArr[i];
             }
             hwAverage /= student.HwArr.Length;
-            
+            */
 
             // with homework list
-            /*
+            
             foreach (var hw in student.HwList)
             {
                 hwAverage += hw;
             }
             hwAverage /= student.HwList.Count;
-            */
+            
 
             hwAverage = Math.Round(hwAverage, 2, MidpointRounding.AwayFromZero);
             return hwAverage;
@@ -82,7 +82,7 @@ namespace PT34_Data_Processing
 
             // with homework array
 
-            
+            /*
             int[] sortedHwArr = new int[student.HwArr.Length];
             Array.Copy(student.HwArr, sortedHwArr, student.HwArr.Length); // copying all elements from from _hwArr into sortedHwArr
             Array.Sort(sortedHwArr);
@@ -97,10 +97,10 @@ namespace PT34_Data_Processing
                 medianPosition = sortedHwArr.Length / 2;
                 hwMedian = sortedHwArr[Convert.ToInt32(medianPosition)];
             }
-            
+            */
 
             // with homework list
-            /*
+            
             List<int> sortedHwList = new List<int>(student.HwList); // shallow copy of _hwList
             sortedHwList.Sort();
 
@@ -116,7 +116,7 @@ namespace PT34_Data_Processing
                 medianPosition = sortedHwList.Count / 2;
                 hwMedian = sortedHwList[Convert.ToInt32(medianPosition)];
             }
-            */
+            
 
             return hwMedian;
         }

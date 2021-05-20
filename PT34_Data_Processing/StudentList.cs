@@ -34,7 +34,7 @@ namespace PT34_Data_Processing
             Console.WriteLine("The list is cleared.");
         }
 
-        public int ReturnNumberOfStudents()
+        public int GetTotalNumberOfStudents()
         {
             int numOfStud = 0;
             foreach(var stud in _students)
