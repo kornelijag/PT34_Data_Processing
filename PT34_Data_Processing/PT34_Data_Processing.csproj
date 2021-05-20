@@ -43,8 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ResultMenu.cs" />
+    <Compile Include="MainMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="StudentList.cs" />
+    <Compile Include="StudentListManager.cs" />
+    <Compile Include="StudentManagementMenu.cs" />
+    <Compile Include="StudentFinalPointTableGenerator.cs" />
+    <Compile Include="StudentPointManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

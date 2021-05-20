@@ -1,0 +1,7 @@
+D:\Desktop\VGTU\VGTU 8th sem\Integrated Development Environments\Homework\HW3-4\PT34_Data_Processing\PT34_Data_Processing\bin\Debug\PT34_Data_Processing.exe.config
+D:\Desktop\VGTU\VGTU 8th sem\Integrated Development Environments\Homework\HW3-4\PT34_Data_Processing\PT34_Data_Processing\bin\Debug\PT34_Data_Processing.exe
+D:\Desktop\VGTU\VGTU 8th sem\Integrated Development Environments\Homework\HW3-4\PT34_Data_Processing\PT34_Data_Processing\bin\Debug\PT34_Data_Processing.pdb
+D:\Desktop\VGTU\VGTU 8th sem\Integrated Development Environments\Homework\HW3-4\PT34_Data_Processing\PT34_Data_Processing\obj\Debug\PT34_Data_Processing.csprojAssemblyReference.cache
+D:\Desktop\VGTU\VGTU 8th sem\Integrated Development Environments\Homework\HW3-4\PT34_Data_Processing\PT34_Data_Processing\obj\Debug\PT34_Data_Processing.csproj.CoreCompileInputs.cache
+D:\Desktop\VGTU\VGTU 8th sem\Integrated Development Environments\Homework\HW3-4\PT34_Data_Processing\PT34_Data_Processing\obj\Debug\PT34_Data_Processing.exe
+D:\Desktop\VGTU\VGTU 8th sem\Integrated Development Environments\Homework\HW3-4\PT34_Data_Processing\PT34_Data_Processing\obj\Debug\PT34_Data_Processing.pdb
