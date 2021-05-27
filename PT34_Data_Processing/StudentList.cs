@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,20 @@ namespace PT34_Data_Processing
             _students.Add(new Student(name, surname));
             Console.WriteLine("New student added: " + name + " " + surname);
 
-            return this; // allows studman.AddStudent(...).AddStudent(...).......
+            return this; // allows AddStudent(...).AddStudent(...).......
+        }
+
+        public StudentList AddStudent(string name, string surname, List<int> hwList, int exam)
+        {
+            _students.Add(new Student(name, surname, hwList, exam));
+            string message = "New student added: " + name + " " + surname + " HW: ";
+
+            foreach (var hw in hwList) message += hw + " ";
+            
+            message += " Exam: " + exam;
+
+            Console.WriteLine(message);
+            return this; // allows AddStudent(...).AddStudent(...).......
         }
 
         public Student GetLastAddedStudent()
@@ -34,7 +48,7 @@ namespace PT34_Data_Processing
             Console.WriteLine("The list is cleared.");
         }
 
-        public int GetTotalNumberOfStudents()
+        public int GetNumberOfStudents()
         {
             int numOfStud = 0;
             foreach(var stud in _students)

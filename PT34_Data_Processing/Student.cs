@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,13 @@ namespace PT34_Data_Processing
             Surname = surname;
         }
 
+        public Student(string surname, string name, List<int> hwList, int exam)
+        {
+            Surname = surname;
+            Name = name;
+            _hwList = hwList.ToList();
+            _exam = exam;
+        }
 
         private string _name;
         public string Name

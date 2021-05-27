@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -81,7 +82,6 @@ namespace PT34_Data_Processing
             int medianPosition;
 
             // with homework array
-
             /*
             int[] sortedHwArr = new int[student.HwArr.Length];
             Array.Copy(student.HwArr, sortedHwArr, student.HwArr.Length); // copying all elements from from _hwArr into sortedHwArr

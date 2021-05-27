@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,10 +20,11 @@ namespace PT34_Data_Processing
                 switch (option)
                 {
                     case 0:
-                        Console.WriteLine("Add students and points: (choose option)");
+                        Console.WriteLine("\nAdd students and points: (choose option)");
                         Console.WriteLine("1 - Manually");
                         Console.WriteLine("2 - Generate default student list with random points");
-                        Console.WriteLine("3 - Back to main menu");
+                        Console.WriteLine("3 - Read from file");
+                        Console.WriteLine("4 - Back to main menu");
                         Console.WriteLine("\nNote: With 2nd option, the existing student list is first cleared.\n");
                         option = Convert.ToInt32(Console.ReadLine());
                         break;
@@ -37,10 +39,17 @@ namespace PT34_Data_Processing
                         loopContinue = false;
                         _studentListManager.AddDefaultStudents(studentList);
                         _studentListManager.GeneratePointsRandomly(studentList);
-                        MainMenu.OpenMenu(studentList);
+                        OpenMenu(studentList);
                         break;
                     case 3:
                         Console.WriteLine("Option chosen: 3");
+                        loopContinue = false;
+                        String filePath = @"D:\Desktop\VGTU\VGTU 8th sem\Integrated Development Environments\Homework\HW3-4\PT34_Data_Processing\students1.txt";
+                        FileManager.ReadFromFile(filePath, studentList);
+                        OpenMenu(studentList);
+                        break;
+                    case 4:
+                        Console.WriteLine("Option chosen: 4");
                         loopContinue = false;
                         MainMenu.OpenMenu(studentList);
                         break;

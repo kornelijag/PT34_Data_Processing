@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -136,7 +137,7 @@ namespace PT34_Data_Processing
 
         public void AddDefaultStudents(StudentList studentList)
         {
-            if (studentList.GetTotalNumberOfStudents() > 0)
+            if (studentList.GetNumberOfStudents() > 0)
             studentList.RemoveAllStudents();
 
             studentList
@@ -162,8 +163,9 @@ namespace PT34_Data_Processing
             }
             */
 
-            // with homework list
 
+            // with homework list
+            
             for (int student = 0; student < studentList.Students.Count; student++)
             {
                 bool hasHw = studentList.Students[student].HwList.Count > 0;
@@ -175,7 +177,7 @@ namespace PT34_Data_Processing
                 // random exam point
                 studentList.Students[student].Exam = random.Next(4, 10);
             }
-
+            
 
             Console.WriteLine("Random HW and exam points have geen generated for all students.");
         }

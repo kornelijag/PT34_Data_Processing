@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,9 +29,11 @@ namespace PT34_Data_Processing
                         StudentManagementMenu studentManagementMenu = new StudentManagementMenu();
                         studentManagementMenu.OpenMenu(studentList);
                         break;
-                    case 2:
+                    case 2:  
                         Console.WriteLine("Option chosen: 2");
-                        ResultMenu.OpenMenu(studentList); // offers to calculate final point based on average or median
+                        StudentFinalPointTableGenerator tableGenerator = new StudentFinalPointTableGenerator();
+                        tableGenerator.GenerateTable(studentList);
+
                         StudentListManager studentListManager = new StudentListManager();
                         studentListManager.PrintAllPoints(studentList);
                         OpenMenu(studentList);
